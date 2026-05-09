@@ -1,0 +1,64 @@
+{
+    "name": "asubodh/filament-two-factor-auth",
+    "description": "A production-ready Two-Factor Authentication plugin for Filament admin panels with TOTP, QR codes, recovery codes, and middleware protection.",
+    "keywords": [
+        "laravel",
+        "filament",
+        "two-factor-authentication",
+        "2fa",
+        "totp",
+        "google-authenticator",
+        "security",
+        "mfa"
+    ],
+    "homepage": "https://github.com/asubodh/filament-two-factor-auth",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Subodh Aryal",
+            "email": "subodh@asubodh.com",
+            "homepage": "https://github.com/asubodh",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "bacon/bacon-qr-code": "^3.0",
+        "filament/filament": "^5.0",
+        "illuminate/contracts": "^11.0|^12.0",
+        "illuminate/support": "^11.0|^12.0",
+        "pragmarx/google2fa": "^8.0|^9.0",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Asubodh\\FilamentTwoFactorAuth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Asubodh\\FilamentTwoFactorAuth\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Asubodh\\FilamentTwoFactorAuth\\TwoFactorAuthServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
